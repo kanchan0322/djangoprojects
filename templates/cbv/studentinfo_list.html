@@ -1,0 +1,36 @@
+{% extends 'cbv/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>Student Data : </h1>
+
+<table  class="table">
+    <thead>
+        <th>Student RollNo</th>
+        <th>Student Name</th>
+        <th>Student DOB</th>
+        <th>Student Marks</th>
+        <th>Student Email</th>
+        <th>Student PhoneNumber</th>
+        <th>Student Address</th>
+    </thead>
+    {% for student in object_list %}
+
+    <tr>
+        <td>{{student.rollno}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.dob}}</td>
+        <td>{{student.marks}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.phonenumber}}</td>
+        <td>{{student.address}}</td>
+        <td> <a href="/{{student.id}}">Details</a> </td>
+        <td><a href="/update/{{student.id}}">Update</a></td>
+        <td><a href="/delete/{{student.id}}">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+<a href="/create" class='btn btn-primary btn-lg'>Do you want to add more Students record</a>
+{% endblock %}

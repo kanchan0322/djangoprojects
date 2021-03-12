@@ -1,0 +1,11 @@
+{% extends 'cbv/base.html' %}
+{% load static %}
+{% block content %}
+<h1> Do you want to delete {{student.name}} data : </h1>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="Delete_Record">
+    <a href="/" class="btn btn-sucess" >Cancel</a>
+</form>
+{% endblock %}

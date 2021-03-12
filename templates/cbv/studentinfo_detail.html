@@ -1,0 +1,13 @@
+{% extends 'cbv/base.html' %}
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+<h1>Detail of Student {{object.name}}:  </h1>
+<ul>
+    <li>Student RollNo : {{object.rollno}}</li>
+    <li>Student Marks : {{object.marks}}</li>
+    <li>Student Email_id:{{object.email}}</li>
+    <li>Student DOB :{{object.dob}}</li>
+</ul>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'cbv/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Add New Student Data : </h1>
+<form method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary btn-lg" name="" value="Insert/Update">
+    <a href="/" class='btn btn-lg btn-success'>CANCEL</a>
+</form>
+{% endblock %}
